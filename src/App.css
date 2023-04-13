@@ -173,7 +173,7 @@ small{
     width: 18px;
     height: 18px;
 }
-.css-1m9pwf3{
+.radio .css-1m9pwf3{
     border-radius: 50%;
     width: 18px !important;
     height: 18px !important;
@@ -181,7 +181,7 @@ small{
 .radio .radio-btn{
     color: var(--radio-color) !important;
 }
-.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
+.radio .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
     color: var(--radio-color) !important;
 }
  .radio .css-vqmohf-MuiButtonBase-root-MuiRadio-root:hover{
