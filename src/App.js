@@ -77,9 +77,9 @@ function App() {
 
     return (
         <div className={`App ${theme}`}>
-             <span className="number">1</span>
-             <span className="number">2</span>
-             <span className="number">3</span>
+            <span className="number">1</span>
+            <span className="number">2</span>
+            <span className="number">3</span>
             <div className="slider-container">
                 <h2 className="title">calc</h2>
                 <small>THEME</small>
@@ -90,6 +90,7 @@ function App() {
                         onChange={handleThemeChange}
                         value="theme-1"
                         name="theme"
+                        color="primary"
                         inputProps={{ 'aria-label': '1' }}
                     />
                     <Radio
@@ -111,7 +112,8 @@ function App() {
                 </div>
             </div>
             <div className="result">
-                <input type="text" value={displayValue} disabled />
+                <label for="inputValue"></label>
+                <input type="text" id="inputValue" value={displayValue} disabled />
             </div>
             <div className="container">
                 <div className="cell">

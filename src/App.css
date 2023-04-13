@@ -178,15 +178,18 @@ small{
     width: 18px !important;
     height: 18px !important;
 }
+.radio .radio-btn{
+    color: var(--radio-color) !important;
+}
 .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
     color: var(--radio-color) !important;
 }
-.css-vqmohf-MuiButtonBase-root-MuiRadio-root:hover{
+ .radio .css-vqmohf-MuiButtonBase-root-MuiRadio-root:hover{
     background: var(--hover-3) !important;
     color: var(--radio-color) !important;
     border-radius: 50%;
 }
-.css-11zohuh-MuiSvgIcon-root{
+.radio .css-11zohuh-MuiSvgIcon-root{
     background: var(--radio-color) !important;
     border-radius: 50%;
 }
