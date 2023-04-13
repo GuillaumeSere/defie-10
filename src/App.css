@@ -1,38 +1,285 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+:root{
+    --bg-color: #3a4764;
+    --egal-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme-1{
+    --bg-color: #3a4764;
+    --input-color: #182034;
+    --inupt-text: white;
+    --container-color: #232c43;
+    --radio-color: #d03f2f;
+    --reset-color: #637097;
+    --shadow-color-1: hsl(6, 70%, 34%);
+    --shadow-color-2: hsl(224, 28%, 35%);
+    --shadow-color-3: hsl(28, 16%, 65%);
+    --btn-color: hsl(45, 7%, 89%);
+    --hover-1: white;
+    --hover-2: #9eacd8;
+    --hover-3: #e95645;
+}
+.theme-2{
+    --bg-color: hsl(0, 0%, 90%);
+    --input-color:  white;
+    --inupt-text: black;
+    --container-color:  hsl(0, 5%, 81%);
+    --radio-color: hsl(25, 98%, 40%);
+    --reset-color:  hsl(185, 42%, 37%);
+    --shadow-color-2: hsl(185, 58%, 25%);
+    --shadow-color-1: hsl(25, 99%, 27%);
+    --shadow-color-3:hsl(35, 11%, 61%);
+    --btn-color:  hsl(45, 7%, 89%);
+    --hover-1: white;
+    --hover-2: hsl(185, 50%, 47%);
+    --hover-3: hsl(25, 91%, 48%);
+}
+.theme-3{
+    --bg-color: hsl(268, 75%, 9%);
+    --input-color:  hsl(268, 71%, 12%);
+    --inupt-text: hsl(52, 100%, 62%);
+    --container-color:  hsl(268, 71%, 12%);
+    --radio-color: hsl(176, 100%, 44%);
+    --reset-color:  hsl(281, 89%, 26%);
+    --shadow-color-3: hsl(290, 70%, 36%);
+    --shadow-color-2: hsl(290, 70%, 36%);
+    --shadow-color-1: hsl(177, 92%, 70%);
+    --btn-color: hsl(268, 47%, 21%);
+    --text-color: hsl(52, 100%, 62%);
+    --egal-color: black;
+    --hover-1: rgb(137, 54, 210);
+    --hover-2: rgb(166, 54, 210);
+    --hover-3: hsl(177, 91%, 78%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'League Spartan', sans-serif;
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  height: 100vh;
+}
+
+.title{
+    color: var(--inupt-text);
+    font-size: 30px;
+}
+
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.result input {
+  width: 550px;
+  height: 120px;
+  background: var(--input-color);
+  color: var(--inupt-text);
+  text-align: right;
+  font-size: 50px;
+  font-weight: 700;
+  padding-right: 2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 550px;
+  padding: 2rem 0;
+  height: 480px;
+  background: var(--container-color);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.slider-container{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.radio{
+    background: var(--container-color);
+    width: 75px;
+    border-radius: 25px;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+small{
+    position: relative;
+    margin-right: -20rem;
+    color: var(--inupt-text);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.radio-btn{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background: var(--container-color) !important;
+    border-radius: 50%;
+}
+.number{
+    position: relative;
+    right: -30rem;
+    margin-right: 1.2rem;
+    color: var(--inupt-text);
+}
+.radio-btn span svg{
+    width: 18px;
+    height: 18px;
+}
+.css-1m9pwf3{
+    border-radius: 50%;
+    width: 18px !important;
+    height: 18px !important;
+}
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
+    color: var(--radio-color) !important;
+}
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root:hover{
+    background: var(--hover-3) !important;
+    color: var(--radio-color) !important;
+    border-radius: 50%;
+}
+.css-11zohuh-MuiSvgIcon-root{
+    background: var(--radio-color) !important;
+    border-radius: 50%;
+}
+.css-ahj2mt-MuiTypography-root{
+    position: absolute !important;
+    top: 7rem !important;
+}
+
+.cell{
+    display: flex;
+}
+
+.btn-small {
+  width: 100px;
+  height: 60px;
+  margin: .8rem;
+  border-radius: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  color: var(--text-color);
+  background: var(--btn-color);
+  box-shadow: 0 5px 5px var(--shadow-color-3);
+}
+.btn-small:hover{
+    background: var(--hover-1);
+}
+
+.del {
+  background: var(--reset-color);
   color: white;
+  font-size: 25px;
+  box-shadow: 0 5px 5px var(--shadow-color-2);
+}
+.del:hover{
+    background: var(--hover-2);
 }
 
-.App-link {
-  color: #61dafb;
+.btn-large {
+  width: 220px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 1.25rem;
+  font-size: 24px;
+  background: var(--reset-color);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  box-shadow:0 5px 5px var(--shadow-color-2);
+}
+.btn-large:hover{
+    background: var(--hover-2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-large:nth-child(2) {
+  background: var(--radio-color);
+  color: var(--egal-color);
+  box-shadow: 0 5px 5px var(--shadow-color-1);
+}
+.btn-large:nth-child(2):hover{
+    background: var(--hover-3);
+}
+
+
+@media (max-width: 600px){
+    .container{
+        max-width: 340px;
+        height: 430px;
+    }
+    .result input{
+        max-width: 340px;
+        height: 80px;
+    }
+    .btn-small{
+        width: 55px;
+        height: 55px;
+        margin: 0.5rem;
+        font-size: 30px;
+    }
+    .btn-large{
+        font-size: 16px;
+        margin: 0.5rem;
+        width: 130px;
+    }
+    .del{
+        font-size: 17px;
+    }
+    small{
+        margin-right: -8rem;
+    }
+    .number{
+        right: -17rem;
+    }
 }
